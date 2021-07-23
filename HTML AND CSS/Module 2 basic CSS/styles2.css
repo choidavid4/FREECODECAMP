@@ -1,0 +1,46 @@
+:root{
+    --my-color: red;
+    --my-font: Arial;
+}
+
+@media(max-width: 800px){
+    :root{
+        --my-color: pink;
+    }
+   
+}
+
+body{
+    background-color: indianred;
+    /* --my-color: pink; */
+}
+
+h1{
+    font-size: 64px;
+}
+
+.square-box{
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+}
+
+#box1{
+    background-color: #0F0;
+}
+
+#box2{
+    background-color: rgba(0,0,255,0.5);
+}
+
+#box3{
+    background-color: var(--my-color, black);
+}
+
+.impact{
+    font-family: Impact, sans-serif;
+}
+
+ #title{
+    font-family: var(--my-font,sans-serif);
+} 

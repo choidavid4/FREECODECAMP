@@ -1,9 +1,26 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color:rgb(44, 44, 44);
+    color: white; 
+}
 .red-text{
-    color: red;
+    color: red !important;
 }
 
+.blue-text{
+    color: blue;
+}
+
+.green-text{
+    color:greenyellow;
+}
+/* The classes that are declared further down override the ones that are up */
 p{
     color: grey;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .big-font{
@@ -39,14 +56,27 @@ p{
     width: 200px;
     height: 100px;
     background-color: firebrick;
+    padding: 20px;
 }
 
 .blue-block{
     width: 200px;
     height: 100px;
     background-color: mediumblue;
+    margin: 50px;
+}
+
+.green-block{
+    width: 50px;
+    height: 50px;
+    background-color: chartreuse;
 }
 
 #heading1{
     color: blue;
+
+}
+
+[type="text"]{
+    background-color: darksalmon;
 }
