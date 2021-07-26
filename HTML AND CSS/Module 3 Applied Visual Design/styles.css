@@ -1,0 +1,46 @@
+
+/* Global reset de todos los elementos */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: lightskyblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+h1,h2,h3,h4{
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+#main-container{
+    width: 800px;
+    margin: auto;
+    background-color: rgba(255,255,255,0.6);
+    height: 100vh;
+}
+
+.justify{
+    text-align: justify;
+}
+
+.center{
+    text-align: center;
+}
+
+.right{
+    text-align: right;
+}
+
+.yellow-background{
+    background-color: yellow;
+    padding: 10px;
+}
