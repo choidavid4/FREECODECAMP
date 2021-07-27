@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<style>
+    body{
+        background-color: rgb(200,200,200);
+        height: 2000px;
+    }
+
+    .box{
+        width: 100px;
+        height: 50px;
+        background-color: aqua;
+    }
+
+    .relative{
+        position:relative;
+        left: 100px;
+        top: 25px;
+    }
+
+    .absolute{
+        /* Es como subirlo un nivel en la pantalla los demas objetos hacen 'slide' abajo de este*/
+        position:absolute;
+    }
+
+    .fixed{
+        /* fixed tambien hace el rol de absolute. saca el objeto del flow del documento (hacia adelante) */
+        position:fixed;
+    }
+
+    .left{
+        float: left;
+        width: 300px;
+    }
+
+    .right{
+        /* float se suele juntar con width para determinar cuanto espacio va a tomar el bloque */
+        float: right;
+        width: 300px;
+        
+    }
+</style>
+
+
+<html>
+    <head>
+        <title>Index 3</title>
+    </head>
+    <body>
+        <h1>This is an h1</h1>
+        <p>fixed box</p>
+        <div class="box fixed" id="box1"></div>
+        <h1>This is an h1</h1>
+        <p>relative box</p>
+        <div class="box relative" id="box2"></div>
+        <h1>This is an h1</h1>
+        <p>absolute box</p>
+        <div class="box absolute"></div>
+        <h1>This is an h1</h1>
+        <div class="box"></div>
+        <h1>This is an h1</h1>
+        <div class="box"></div>
+        
+
+        <hr>
+
+
+        <p class="left">This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. </p>
+
+        <p class="right">This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. </p>
+    </body>
+</html>
