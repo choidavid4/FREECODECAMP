@@ -1,0 +1,119 @@
+
+<style>
+    .hsl1{
+        background-color: hsl(0, 100%, 50%);
+    }
+
+    .hsl2{
+        background-color: hsl(60, 100%, 50%);
+    }
+
+    .hsl3{
+        background-color: hsl(120, 100%, 50%);
+    }
+
+    .hsl4{
+        background-color: hsl(180, 100%, 50%);
+    }
+
+    .hsl5{
+        background-color: hsl(240, 100%, 50%);
+    }
+
+    .hsl6{
+        /* hsl uses color wheel to select the color */
+        background-color: hsl(300, 100%, 50%);
+    }
+
+    .gradient{
+        /* notice how we use background instead of background-color */
+        background: linear-gradient(90deg, red, blue, red);
+    }
+
+    .repeating-gradient{
+        background-color: black;
+        background: repeating-linear-gradient(
+            90deg,
+            rgb(50,255,50) 0px,
+            red 40px,
+            blue 80px
+        );
+        
+    }
+
+    .big-block{
+        width: 300px;
+        height: 300px;
+        display: inline-block;
+    }
+
+    .texture{
+        background:url(https://i2.wp.com/crgkc.com/wp-content/uploads/2017/10/wood.jpg?fit=300%2C200&ssl=1);
+    }
+
+    .block{
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+    }
+    p{
+        transform: scale(2);
+    }
+    p:hover{
+        transform: scale(2.5);
+    }
+
+    .big-block:hover{
+        transform: skewX(32deg);
+    }
+
+    .block:hover{
+        transform: skewY(-32deg);
+    }
+
+    .moon{
+        width: 100px;
+        height: 100px;
+        background-color: transparent;
+        box-shadow: 20px 10px rgb(28, 67, 104);
+        border-radius: 50%;
+        display: inline-block;
+    }
+
+    .red-shadow{
+        box-shadow: 20px 10px red;
+    }
+
+    .green-shadow{
+        box-shadow: 20px 10px greenyellow;
+    }
+
+    .yellow-shadow{
+        box-shadow: 20px 10px gold;
+    }
+
+
+</style>
+<body>
+    <div class="block hsl1"></div>
+    <div class="block hsl2"></div>
+    <div class="block hsl3"></div>
+    <div class="block hsl4"></div>
+    <div class="block hsl5"></div>
+    <div class="block hsl6"></div>
+
+    <div class="big-block gradient"></div>
+    <div class="repeating-gradient big-block"></div>
+    <div class="big-block texture"></div>
+
+    <p>Hello! I am a paragraph! Hello! I am a paragraph! Hello! I am a paragraph! Hello! I am a paragraph! Hello! I am a paragraph! Hello! I am a paragraph! Hello! I am a paragraph! Hello! I am a paragraph! </p>
+    <p>Hello! I am a paragraph! Hello! I am a paragraph! Hello! I am a paragraph! Hello! I am a paragraph! Hello! I am a paragraph! Hello! I am a paragraph! Hello! I am a paragraph! Hello! I am a paragraph! </p>
+
+    <div class="moon"></div>
+    <div class="moon red-shadow"></div>
+    <div class="moon green-shadow"></div>
+    <div class="moon yellow-shadow"></div>
+
+
+    
+</body>

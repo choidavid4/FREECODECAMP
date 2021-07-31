@@ -1,0 +1,112 @@
+<style>
+    body{
+        background-color:lightyellow;
+    }
+
+    .block{
+        width: 200px;
+        height: 100px;
+        background-color: gold;
+    }
+
+    .animate{
+        animation-name: color-change;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+
+    }
+
+
+    p:hover{
+        animation-name: bigger;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+    }
+
+    .move{
+        animation-name: horizontal-move;
+        animation-duration: 2s;
+        position: relative;
+        animation-iteration-count: infinite;
+    }
+
+    .move2{
+        animation-name: horizontal-move2;
+        animation-duration: 2s;
+        position: relative;
+        animation-iteration-count: infinite;
+    }
+
+    .circle{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: hotpink;
+    }
+
+    .ease-in{
+        animation-timing-function: ease-in;
+    }
+
+    .ease-out{
+        animation-timing-function: ease-out;
+    }
+
+    .linear{
+        animation-timing-function: linear;
+    }
+
+    @keyframes color-change{
+        0%{
+            background-color: gold;
+        }
+
+        50%{
+            background-color:red;
+        } 
+
+        100%{
+            background-color: gold;
+        }
+    }
+
+    @keyframes bigger{
+        100%{
+            font-size: 30px;
+        }
+    }
+
+    @keyframes horizontal-move {
+        0%{
+            left: 0px;
+        }
+        50%{
+            left: 500px;
+        }
+        100%{
+            left: 0px;
+        }
+    }
+
+    @keyframes horizontal-move2 {
+        0%{
+            left: 0px;
+        }
+        30%{
+            left: 500px;
+            opacity: 0;
+        }
+        100%{
+            left: 0px;
+        }
+    }
+</style>
+<body>
+    <div class="block animate"></div>
+    <p>Hello! This is a paragraph!</p>
+    <div class="block move"></div>
+    <div class="block move2"></div>
+    <div class="circle move ease-in"></div>
+    <div class="circle move ease-out"></div>
+    <div class="circle move linear"></div>
+</body>

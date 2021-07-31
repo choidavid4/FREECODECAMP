@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applied Accessibility</title>
+
+    <style>
+
+        
+
+        body{
+            background-color: lightyellow;
+        }
+
+        main{
+            position: relative;
+            top: 150px;
+            width: 500px;
+            margin: auto;
+        }
+
+        #plant{
+            /* Ojo con el transform scale porque, si bien el contenido es mas chico, el bloque sigue consumiendo el mismo tamaño en la pagina */
+            width: 500px;
+            height: 500px;
+            display: block;
+            border-style: solid;
+            border-width: 5px;
+            border-color: black;
+        }
+
+        header{
+            background-color: burlywood;
+            position: fixed;
+            width: 100%;
+            z-index: 1;
+        }
+
+        header nav{
+            float: right;
+        }
+
+        header img{
+            width: 200px;
+            height: 100px;
+            float: left;
+            padding: 20px;
+        }
+
+        header ul{
+            list-style: none;
+            padding: 20px;
+        }
+
+        header li{
+            display: inline-block;
+            padding-right: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://cdn.worldvectorlogo.com/logos/coca-cola-6.svg" alt="coca cola logo">
+        <nav>
+            <ul>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">about</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <main>
+
+
+        <img src="idontexist.jpg" alt="I am an alternative text">
+        <!-- When it's decorative alt can be left blank -->
+        <img src="plant.png" alt="" id="plant">
+        
+        <h1>Big principal title</h1>
+        <h2>Subtitle 1</h2>
+        <h3>Sub subtitle 1</h3>
+        <h3>Sub subtitle 2</h3>
+        <article>
+            <h2>Subtitle 2</h2>
+            <p>I am an interesting article! I am an interesting article!I am an interesting article!I am an interesting article!I am an interesting article!I am an interesting article!I am an interesting article!I am an interesting article!I am an interesting article!I am an interesting article!</p>
+        </article>
+        
+        <h2>Subtitle 3</h2>
+    </main>
+</body>
+</html>
