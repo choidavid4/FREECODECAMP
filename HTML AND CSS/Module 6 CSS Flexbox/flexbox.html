@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Flexbox</title>
+        <style>
+            body{
+                background-color: khaki;
+            }
+
+            h2{
+                text-align: center;
+            }
+
+            #container{
+                background-color: silver;
+                display: flex;
+                flex-direction: column;
+            }
+
+            #container2{
+                background-color: silver;
+                display: flex;
+                flex-direction: row;
+            }
+
+            #container3{
+                background-color: silver;
+                display: flex;
+                flex-direction: row-reverse;
+            }
+
+            .box{
+                width: 50%;
+                height: 75px;
+            }
+
+            .blue{
+                background-color: midnightblue;
+            }
+
+            .red{
+                background-color: orangered;
+            }
+            
+            .green{
+                background-color: palegreen;
+            }
+
+            .mini-box{
+                width: 20%;
+                height: 50px;
+            }
+
+            .jc-center{
+                background-color: silver;
+                display: flex;
+                justify-content: center;
+            }
+
+            .jc-flex-end{
+                background-color: silver;
+                display: flex;
+                justify-content: flex-end;
+            }
+
+            .jc-space-between{
+                background-color: silver;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .jc-space-around{
+                background-color: silver;
+                display: flex;
+                justify-content: space-around;
+            }
+
+            .jc-space-evenly{
+                background-color: silver;
+                display: flex;
+                justify-content: space-evenly;
+            }
+
+            .flex{
+                background-color: silver;
+                display: flex;
+            }
+
+            .flex2{
+                background-color: silver;
+                display: flex;
+                height: 150px;
+            }
+
+            .tall-box{
+                width: 50%;
+            }
+
+            .ai-center{
+                align-items: center;
+            }
+
+            .ai-flex-start{
+                align-items: flex-start;
+            }
+
+            .ai-flex-end{
+                align-items: flex-end;
+            }
+
+            .ai-baseline{
+                align-items: baseline;
+            }
+        
+        </style>
+    </head>
+    <body>
+        <h2>flex-direction column</h2>
+        <div id="container">
+            <div class="box blue"></div>
+            <div class="box red"></div>
+        </div>
+        <hr>
+
+        <h2>flex-direction default (row)</h2>
+        <div id="container2">
+            <div class="box blue"></div>
+            <div class="box red"></div>
+        </div>
+        <hr>
+
+        <h2>flex-direction row-reverse</h2>
+        <div id="container3">
+            <div class="box blue"></div>
+            <div class="box red"></div>
+        </div>
+        <hr>
+        <br>
+        <h2>justify-content default</h2>
+        <div class="flex">
+            <div class="mini-box blue"></div>
+            <div class="mini-box red"></div>
+        </div>
+        <hr>
+
+        <h2>JC center</h2>
+        <div class="jc-center">
+            <div class="mini-box blue"></div>
+            <div class="mini-box red"></div>
+        </div>
+        <hr>
+
+        <h2>jc flex-end</h2>
+        <div class="jc-flex-end">
+            <div class="mini-box blue"></div>
+            <div class="mini-box red"></div>
+        </div>
+        <hr>
+
+        <h2>jc space-between</h2>
+        <div class="jc-space-between">
+            <div class="mini-box blue"></div>
+            <div class="mini-box red"></div>
+        </div>
+        <hr>
+
+        <h2>jc space-around</h2>
+        <div class="jc-space-around">
+            <div class="mini-box blue"></div>
+            <div class="mini-box red"></div>
+        </div>
+        <hr>
+
+        <h2>jc space evenly</h2>
+        <div class="jc-space-evenly">
+            <div class="mini-box blue"></div>
+            <div class="mini-box red"></div>
+        </div>
+        <hr>
+        <br>
+
+        <h2>align-items default</h2>
+        <div class="flex2">
+            <div class="tall-box red">
+                <p>Hello World!</p>
+            </div>
+            <div class="tall-box blue">
+                <p>1, 2, 4</p>
+            </div>
+        </div>
+        <hr>
+
+        <h2>ai center</h2>
+        <div class="flex2 ai-center">
+            <div class="tall-box red">
+                <p>Hello World!</p>
+            </div>
+            <div class="tall-box blue">
+                <p>1, 2, 4</p>
+            </div>
+        </div>
+        <hr>
+
+        <h2>ai flex-start</h2>
+        <div class="flex2 ai-flex-start">
+            <div class="tall-box red">
+                <p>Hello World!</p>
+            </div>
+            <div class="tall-box blue">
+                <p>1, 2, 4</p>
+            </div>
+        </div>
+        <hr>
+
+        <h2>ai flex-end</h2>
+        <div class="flex2 ai-flex-end">
+            <div class="tall-box red">
+                <p>Hello World!</p>
+            </div>
+            <div class="tall-box blue">
+                <p>1, 2, 4</p>
+            </div>
+        </div>
+        <hr>
+
+        <h2>ai baseline</h2>
+        <div class="flex2 ai-baseline">
+            <div class="tall-box red">
+                <p>Hello World!</p>
+            </div>
+            <div class="tall-box blue">
+                <p>1, 2, 4</p>
+            </div>
+        </div>
+        <hr>
+
+        <h2>ai no paragraphs</h2>
+        <div class="flex2 ai-baseline">
+            <div class="tall-box red">
+
+            </div>
+            <div class="tall-box blue">
+
+            </div>
+        </div>
+
+
+
+
+
+        
+    </body>
+</html>

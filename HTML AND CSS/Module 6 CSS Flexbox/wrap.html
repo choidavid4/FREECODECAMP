@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>flex-wrap</title>
+        <style>
+            body{
+                background-color: cornsilk;
+            }
+
+            h2{
+                text-align: center;
+            }
+
+            .flex{
+                background-color: silver;
+                display: flex;
+                height: 300px;
+            }
+
+            .box{
+                width: 25%;
+            }
+
+            .mini-box{
+                width: 33%;
+                height: 50%;
+            }
+
+            .as-center{ align-self: center; }
+            .as-flex-start{ align-self: flex-start; }
+            .as-flex-end{ align-self: flex-end; }
+
+            .wrap{ flex-wrap: wrap; }
+            .wrap-reverse{ flex-wrap: wrap-reverse; }
+
+            #box1{
+                width: 100%;
+                flex-shrink: 1;
+            }
+
+            #box2{
+                width: 100%;
+                flex-shrink: 2;
+            }
+
+            #box3{
+                width: 1px;
+                flex-grow: 1;
+            }
+
+            #box4{
+                width: 1px;
+                flex-grow: 2;
+            }
+
+            .flex-basis{
+                flex-basis: 50%;
+            }
+
+            .default{
+                flex: 0 1 auto;
+            }
+
+            .shortcut{
+                flex: 2 2 25%;
+            }
+
+            .shortcut2{
+                flex: 1 1 25%;
+            }
+
+            .first{ order:1; }
+            .second{ order:2; }
+            .third{ order:3; }
+            .fourth{ order:4; }
+
+
+            .red{ background-color: tomato; }
+            .blue{ background-color:cornflowerblue; }
+            .green{ background-color: springgreen; }
+            .yellow{ background-color: khaki;}
+            .pink{ background-color: pink;}
+            .purple{ background-color: mediumpurple;}
+        </style>
+    </head>
+    <body>
+        <h2>container height: 300px</h2>
+        <h2>flex-wrap: no-wrap (default)</h2>
+        <div class="flex">
+            <div class="box red"></div>
+            <div class="box blue"></div>
+            <div class="box green"></div>
+            <div class="box yellow"></div>
+            <div class="box pink"></div>
+            <div class="box purple"></div>
+        </div>
+        <h2>flex-wrap: wrap</h2>
+        <div class="flex wrap">
+            <div class="box red"></div>
+            <div class="box blue"></div>
+            <div class="box green"></div>
+            <div class="box yellow"></div>
+            <div class="box pink"></div>
+            <div class="box purple"></div>
+        </div>
+        <h2>flex-wrap: wrap-reverse</h2>
+        <div class="flex wrap-reverse">
+            <div class="box red"></div>
+            <div class="box blue"></div>
+            <div class="box green"></div>
+            <div class="box yellow"></div>
+            <div class="box pink"></div>
+            <div class="box purple"></div>
+        </div>
+
+        <h2>flex-shrink 2 and 1 widths: 100%</h2>
+        <div class="flex">
+            <div class="red" id="box1"></div>
+            <div id="box2" class="blue"></div>
+        </div>
+
+        <h2>flex-grow 1 and 2 widths: 1px</h2>
+        <div class="flex">
+            <div class="red" id="box3"></div>
+            <div class="blue" id="box4"></div>
+        </div>
+
+        <h2>flex-basis</h2>
+        <div class="flex">
+            <div class="red flex-basis" ></div>
+            <div class="blue flex-basis" ></div>
+        </div>
+
+        <h2>flex: grow shrink basis</h2>
+        <div class="flex">
+            <div class="red shortcut"></div>
+            <div class="blue shortcut2"></div>
+        </div>
+
+        <h2>order in HTML (red, blue, green, yellow)</h2>
+        <div class="flex">
+            <div class="box red second"></div>
+            <div class="box blue"></div>
+            <div class="box green third"></div>
+            <div class="box yellow first"></div>
+        </div>
+
+        <h2>align self</h2>
+        <div class="flex">
+            <div class="red mini-box as-center"></div>
+            <div class="mini-box blue as-flex-start"></div>
+            <div class="mini-box green as-flex-end"></div>
+        </div>
+
+
+    </body>
+</html>
