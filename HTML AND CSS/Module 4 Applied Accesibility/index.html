@@ -7,7 +7,10 @@
     <title>Applied Accessibility</title>
 
     <style>
-
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
         
 
         body{
@@ -59,9 +62,31 @@
             padding-right: 20px;
         }
 
+        #shiba{
+            width: 500px;
+            height: 350px;
+        }
+
+        .sr-only{
+            width: 1px;
+            height: 1px;
+            left: -1000000px;
+            position: absolute;
+        }
+
+        [type="text"]:focus{
+            background-color: yellow;
+        }
+
+        p:focus{
+            background-color: yellowgreen;
+        }
+
     </style>
 </head>
 <body>
+
+    <!-- Recordar que nav header footer son solamente divs especiales -->
     <header>
         <img src="https://cdn.worldvectorlogo.com/logos/coca-cola-6.svg" alt="coca cola logo">
         <nav>
@@ -91,6 +116,42 @@
         </article>
         
         <h2>Subtitle 3</h2>
+
+        <audio controls>
+            <source src="https://s3.amazonaws.com/freecodecamp/screen-reader.mp3" type="audio/mpeg">
+        </audio>
+
+        <p>A continuacion, a figure element</p>
+        <!-- El figure tag se usa para imagenes, graficos, tablas -->
+        <figure>
+            <img id="shiba" src="dog.jpg" alt="a shiba dog">
+            <figcaption>
+                This is a shiba dog.
+            </figcaption>
+        </figure>
+
+        <label for="date">Pick a date</label>
+        <input type="date" name="date" id="date">
+
+        <br>
+        <time datetime="24 of July">Date</time>
+
+        <p class="sr-only">Hello! Screen reader user!</p>
+
+        <p>Make sure to visit <a href="https://proyectosdeiv.com.ar" target="_blank">my website!</a></p>
+
+        <a accesskey="t" href="#">go to top</a>
+
+        <!-- tabindex 1, 2, ... , n , 0  segun freecodecamp, pero nop.-->
+        <!-- En testeo salio 0,1,2,...,n -->
+        <form>
+            <input type="text" tabindex="0" placeholder="I go first">
+            <input type="text" tabindex="0" placeholder="I go third">
+            <input type="text" tabindex="0" placeholder="I go second">
+        </form>
+
+        <p tabindex="0">Hello World!</p>
+        
     </main>
 </body>
 </html>

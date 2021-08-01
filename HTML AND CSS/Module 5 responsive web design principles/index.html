@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Web Design Principles</title>
+    <style>
+        body{
+            background-color: thistle;
+            font-family: "Roboto", Times, serif;
+            
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        .box{
+            width: 40%;
+            height: 200px;
+            margin: 20px;
+            display: inline-block;
+        }
+
+        #box1{
+            background-color: aqua;
+        }
+
+        #box2{
+            background-color: coral;
+        }
+
+        .green{
+            background-color: forestgreen;
+        }
+
+        #dog{
+            /* 50% seria la mitad del tamaño de la ventana */
+            width: 100%;
+            display: block;
+        }
+
+        p{
+            width: 80vw;
+            margin: auto;
+            margin-top: 20px; 
+        }
+
+         @media (max-width: 500px) {
+            body{
+                 background-color: khaki;
+            }
+
+            .box{
+                width: 90%;
+            }
+        }
+    </style>
+
+
+</head>
+<body>
+    <h1>Wellcome to my Responsive Website!</h1>
+
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+
+    <img src="../Module 4 Applied Accesibility/dog.jpg" alt="a dog" id="dog">
+
+    <p>Hello! I am a paragraph! Hello! I am a paragraph! Hello! I am a paragraph! Hello! I am a paragraph! Hello! I am a paragraph! Hello! I am a paragraph! Hello! I am a paragraph! Hello! I am a paragraph! Hello! I am a paragraph! Hello! I am a paragraph! Hello! I am a paragraph!</p>
+</body>
+</html>
