@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Grid</title>
+        <style>
+            body{
+                background-color: darksalmon;
+                font-family: 'Roboto', sans-serif;
+            }
+
+            h2{ text-align: center; }
+            p{ 
+                margin: 0px;
+                font-size: 25px; 
+            }
+
+            .container{
+                background-color: silver;
+                display: grid;
+            }
+
+            .red{ background-color: crimson; }
+            .blue{ background-color:cornflowerblue; }
+            .green{ background-color: springgreen; }
+            .yellow{ background-color: khaki;}
+            .pink{ background-color: pink;}
+            .purple{ background-color: mediumpurple;}
+
+            .columns2{
+                grid-template-columns: 50% 50%;
+                grid-template-rows: 200px 200px 100px;
+            }
+
+            .grid2{
+                grid-template-columns: 350px 30% 1fr 2fr;
+                grid-template-rows: 100px;
+            }
+
+            .grid3{
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                column-gap: 50px;
+                row-gap: 50px;  
+                height: 300px;
+                /* gap: row column   */
+            }
+
+            .grid4{
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+                height: 350px;
+                gap: 25px 50px;
+            }
+
+            .block1{
+                grid-column: 1/3;
+            }
+
+            .block2{
+                grid-row: 1/4;
+            }
+
+            .block3{
+                grid-column: 1/3;
+                grid-row: 2/4;
+            }
+
+            .grid5{
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 200px 200px;
+                gap: 25px 25px;
+            }
+
+            .jsas1{
+                justify-self: center;
+                align-self: end;
+            }
+
+            .jsas2{
+                justify-self: start;
+                align-self: start;
+            }
+
+            .jsas3{
+                justify-self: end;
+                align-self: center;
+            }
+
+            .jsas4{
+                justify-self: center;
+                align-self: center;
+            }
+
+            .jsas-container{
+                justify-items: center;
+            }
+
+            .jsas-container2{
+                align-items: center;
+            }
+
+            /* Primero el mobile despues los mas grandes */
+            .grid-areas{
+                    grid-template-rows: 100px minmax(200px, auto) 50px 100px;
+                    grid-template-columns: 1fr 50px;
+                    gap: 10px;
+                    grid-template-areas: 
+                        "header header"
+                        "content side"
+                        "ad ad"
+                        "footer footer";
+                }
+            
+
+            @media (min-width: 550px) {
+                
+                .grid-areas{
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-template-rows: repeat(4, 100px);
+                    gap: 25px;
+                    grid-template-areas: 
+                        "header header header"
+                        "ad content side"
+                        ". content side"
+                        "footer footer footer";
+                }
+            }
+
+            .header-area{ grid-area: header; }
+            .ad-area{ grid-area: ad; }
+            .content-area{ grid-area: content;}
+            .side-area{grid-area: side;}
+            .footer-area{grid-area: footer;}
+            /* .footer-area{grid-area: 4/1/5/4;} */
+            /* grid-area: h1/v1/h2/v2 */
+
+            .grid-repeat{
+                grid-template-columns: repeat(9, 1fr) 300px;
+                grid-template-rows: 100px;
+            }
+
+            .grid-repeat2{
+                
+                grid-template-rows: repeat(3, 50px 100px);
+            }
+
+            .minmax{
+                grid-template-rows: 100px;
+                grid-template-columns: repeat(3, minmax(100px,1fr));
+            }
+
+            .auto-fill{
+                grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+                height: 300px;
+            }
+
+            .auto-fit{
+                
+                grid-template-rows: 100px 100px 100px;
+                /* auto-fit collapses those empty rows or columns and stretches your items to fit the size of the container. */
+                /* Lo tengo que usar si o si con minmax */
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+            }
+
+            .grid6{
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(2, 100px);
+                gap: 10px;
+            }
+
+
+            .grid7{
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(2, 50px);
+                gap: 10px;
+            }
+            
+
+
+
+        </style>
+    </head>
+    <body>
+        <h2>columns: 50% 50%;<br>rows: 200px 200px 120px;</h2>
+        <div class="container columns2">
+            <div class=" red"></div>
+            <div class=" blue"></div>
+            <div class=" green"></div>
+            <div class=" yellow"></div>
+            <div class=" pink"></div>
+        </div>
+        <h2>grid-template-columns: 350px 30% 1fr 2fr;</h2>
+        <div class="container grid2">
+            <div class="red"></div>
+            <div class="blue"></div>
+            <div class="green"></div>
+            <div class="yellow"></div>
+        </div>
+        <h2>column-gap: 50px;<br>row-gap: 50px;</h2>
+        <div class="container grid3">
+            <div class="red"></div>
+            <div class="blue"></div>
+            <div class="green"></div>
+            <div class="yellow"></div>
+            <div class="pink"></div>
+            <div class="purple"></div>
+        </div>
+        <h2>grid-column: 1/3;
+            <br>grid-row: 1/4;
+            <br>grid-column: 1/3;
+            grid-row: 2/4;
+        </h2>
+        <div class="container grid4">
+            <div class="red block1"></div>
+            <div class="blue block2"></div>
+            <div class="green block3"></div>
+        </div>
+        <h2>Justify-self & Align-self (start, center, end)</h2>
+        <div class="container grid5">
+            <div class="red jsas1" ><p>center end</p></div>
+            <div class="blue jsas2"><p>start start</p></div>
+            <div class="green jsas3"><p>end center</p></div>
+            <div class="yellow jsas4"><p>center center</p></div>
+            <div class="purple"><p>Purple</p></div>
+        </div>
+        <h2>justify-items: center;</h2>
+        <div class="container grid5 jsas-container">
+            <div class="red"><p>Red</p></div>
+            <div class="blue"><p>Blue</p></div>
+            <div class="green"><p>Green</p></div>
+            <div class="yellow"><p>Yellow</p></div>
+        </div>
+
+        <h2>align-items: center;</h2>
+        <div class="container grid5 jsas-container2">
+            <div class="red"><p>Red</p></div>
+            <div class="blue"><p>Blue</p></div>
+            <div class="green"><p>Green</p></div>
+            <div class="yellow"><p>Yellow</p></div>
+            <div class="purple"><p>Purple</p></div>
+        </div>
+        <h2>grid-template-areas: <br>
+            "header header header" <br>
+            "ad content side" <br>
+            ". content side" <br>
+            "footer footer footer";</h2>
+        <div class="container grid-areas">
+            <div class="red  header-area"></div>
+            <div class=" blue ad-area"></div>
+            <div class=" green content-area"></div>
+            <div class=" yellow side-area"></div>
+            <div class=" pink footer-area"></div>
+        </div>
+        <h2>grid-template-columns: repeat(9, 1fr) 300px;</h2>
+        <div class="container grid-repeat">
+            <div class="red "></div>
+            <div class="blue "></div>
+            <div class="green "></div>
+            <div class="yellow "></div>
+            <div class="pink "></div>
+            <div class="red "></div>
+            <div class="blue "></div>
+            <div class="green "></div>
+            <div class="yellow "></div>
+            <div class="pink "></div>
+        </div>
+
+        <h2>grid-template-rows: repeat(3, 50px 100px);</h2>
+        <div class="container grid-repeat2">
+            <div class="red"></div>
+            <div class="blue"></div>
+            <div class="green"></div>
+            <div class="yellow"></div>
+            <div class="pink "></div>
+            <div class="purple"></div>
+        </div>
+        <h2>grid-template-columns: repeat(3, minmax(100px,1fr));</h2>
+        <div class="container minmax">
+            <div class="red"></div>
+            <div class="blue"></div>
+            <div class="green"></div>
+        </div>
+        <h2>grid-template-columns: repeat(<u>auto-fill</u>, minmax(200px,1fr));</h2>
+        <div class="container auto-fill">
+            <div class="red"></div>
+            <div class="blue"></div>
+            <div class="green"></div>
+            <div class="yellow"></div>
+            <div class="pink"></div>
+        </div>
+        <h2>grid-template-columns: repeat(<u>auto-fit</u>, minmax(200px, 1fr)); </h2>
+        <div class="container auto-fit">
+            <div class="red"></div>
+            <div class="blue"></div>
+            <div class="green"></div>
+            <div class="yellow"></div>
+            <div class="pink"></div>
+        </div>
+        <h2>Nested grid</h2>
+        <div class="container grid6">
+            <div class="container grid7">
+                <div class="red"></div>
+                <div class="blue"></div>
+                <div class="yellow"></div>
+                <div class="green"></div>
+                <div class="pink"></div>
+            </div>
+            <div class="blue"></div>
+            <div class="green"></div>
+            <div class="yellow"></div>
+            <div class="pink"></div>
+        </div>
+
+
+
+    </body>
+</html>
