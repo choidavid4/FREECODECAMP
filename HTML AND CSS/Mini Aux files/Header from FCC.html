@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Header from FCC</title>
+    <style> 
+        :root {
+            --main-white: #f0f0f0;
+            --main-red: #be3144;
+            --main-blue: #45567d;
+            --main-gray: #303841;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            box-sizing: border-box;
+
+            /* Set font size for easy rem calculations
+            * default document font size = 16px, 1rem = 16px, 100% = 16px
+            * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
+            */
+            font-size: 62.5%;
+            scroll-behavior: smooth;
+        }
+
+        body{
+            background-color: lavender;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem; /* 18px */
+            font-weight: 400;
+            line-height: 1.4;
+            color: var(--main-white);
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--main-white);
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* nav */
+
+        .nav {
+            display: flex;
+            justify-content: flex-end;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: var(--main-red);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            z-index: 10;
+        }
+
+        .nav-list {
+            display: flex;
+            margin-right: 2rem;
+        }
+
+        @media (max-width: 28.75em) {
+            .nav {
+                justify-content: center;
+            }
+
+            .nav-list {
+                margin: 0 1rem;
+            }
+        }
+
+        .nav-list a {
+            display: block;
+            font-size: 2.2rem;
+            padding: 2rem;
+        }
+
+        .nav-list a:hover {
+            background: var(--main-blue);
+        }
+
+        .big-div{
+            display: grid;
+            place-items: center;
+            height: 100vh;
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- START NAV -->
+    
+    <nav id="navbar" class="nav">
+        <ul class="nav-list">
+            <li>
+                <a href="#welcome-section">About</a>
+            </li>
+            <li>
+                <a href="#projects">Work</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+    </nav>
+    
+    <!-- END NAV -->
+
+    <div class="big-div">
+        <p>Hi</p>
+    </div>
+    <div class="big-div">
+        <p>Hi Again</p>
+    </div>
+    <div class="big-div">
+        <p>Hi once more</p>
+    </div>
+</body>
+</html>

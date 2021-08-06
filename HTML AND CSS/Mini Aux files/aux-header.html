@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Responsive Header</title>
+        <style>
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+
+            body{
+                background-color: wheat;
+                font-family: Roboto,sans-serif;
+            }
+
+            img{
+                max-width: 100%;
+                max-height: 100%;
+                box-sizing: border-box;
+            }
+
+            header{
+                display: flex;
+                background-color: silver;
+                align-items: center;
+                padding-top: 25px;
+                padding-bottom: 25px;
+            }
+
+            .logo{
+                width: 30%;
+                background-color: tomato;
+                font-size: 3vw;
+                text-align: center;
+            }
+
+            .navbar{
+                width: 70%;
+                background-color: skyblue;
+                text-align: center;
+                font-size: 2vw;
+                
+            }
+
+            @media (max-width:650px) {
+                .logo{
+                    width: 100%;
+                }
+                .navbar{
+                    width: 100%;
+                }
+
+                .header{
+                    display: grid;
+                }
+            }
+
+            .navbar a{
+                text-decoration: none;
+                color: black;
+                padding-left: 10%;
+            }
+
+            .navbar a:hover{
+                color: white;
+            }
+
+            .vertical-center{
+                padding: 25px 0px 25px 0px;
+            }
+
+            .outer-container{
+                width: 200px;
+                height: 300px;
+                border-color: black;
+                border-width: 5px;
+                border-style: solid;
+                
+                
+            }
+
+            .inner-container{
+                border-style: solid;
+                border-width: 10px;
+                padding:50px;
+                border-color: tomato;
+                width: 200px;
+                
+            }
+
+            .content-box{
+                box-sizing: content-box;
+            }
+
+            .border-box{
+                box-sizing: border-box;
+            }
+
+            .flex{
+                display: flex;
+                align-items: center;
+            }
+
+            .flex-row3{
+                display: flex;
+                min-height: 200px;
+                background-color: sandybrown;
+                
+            }
+
+            .column{
+                width: 100%;
+                text-align: center;
+                display: grid;
+                place-items: center;
+                padding: 20px;
+            }
+
+            .column img{
+                border-radius: 20px;
+                border-style: solid;
+                border-color: lightseagreen;
+            }
+
+
+
+            .red{background-color: tomato;}
+            .green{background-color: lawngreen;}
+            .yellow{background-color: khaki;}
+
+            .center-text{text-align: center;}
+
+
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <p>Hello World</p>
+            </div>
+            <div class="navbar">
+                <nav>
+                    <a href="">One</a>
+                    <a href="">One</a>
+                    <a href="">One</a>
+                    <a href="">One</a>
+                </nav>
+            </div>
+        </header>
+
+        <div class="outer-container">
+            <div class="inner-container">
+                <p>Hello World</p>
+                
+            </div>
+        </div>
+
+        <div class="outer-container">
+            <div class="inner-container border-box">
+                <p>Hello again</p>
+            </div>
+        </div>
+
+        <p>El display:flex arregla el problema de box-sizing automaticamente</p>
+        <p>Con display:flex</p>
+
+        <div class="outer-container flex">
+            <div class="inner-container">
+                <p>Hello a third time</p>
+            </div>
+        </div>
+
+        <div class="flex-row3">
+            
+            <div class="column red">
+                <div>
+                    <p>hi there</p>
+                    <img src="stack.png" alt="">
+                    <p>Hello</p>
+                    <p>Hello</p>
+                    <p>Hello</p>
+                    <p>Hello</p>
+                    <p>Hello</p>
+                    <p>Hello</p>
+                    <p>Hello</p>
+                    <p>Hello</p>
+                    <p>Hello</p>
+                    <p>Hello</p>
+                </div>
+                
+                
+            </div>
+            
+            
+            <div class="column green">
+                <div class="content">
+                    <img src="responsive.png" alt="">
+                    <p>hi there</p>
+                    <p>What</p>
+                </div>
+                
+            </div>
+            <div class="column yellow">
+                <div class="content">
+                    <p>hi there</p>
+                    <p>Hi</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
