@@ -100,7 +100,32 @@ let numeros2 = [1,5,2,9,3,4,8,1];
 //let newArray = arr no soluciona mi problema, estoy copiando el pointer nomas
 //use 'let newArray = [...arr]' instead
 
+//Separar un string por caracteres no alfanumericos
+function splitify(str) {
+  return str.split(/\W/); // Usar \W en vez de ^\w
+}
+//Para filtrar numeros tambien podemos usar /[^a-z]/i
+
+let myString = "hEllo world!123";
+let myRegex = /[^a-z]/g; 
+
+//Convertir un titulo a un url slug
+function urlSlug(title) {
+  let slug = title.toLowerCase().trim().split(/\s+/).join('-');
+  return slug;
+}
 
 
+//funcion arr.every(element => condition) retorna true si todos los elementos passan la condicion.
+//arr.some(element => condition) retorna true si al menos un elemento cumple la condicion
 
-
+//currear una funcion es basicamente hacer que una funcion retorne otra funcion que use el siguiente argumento en vez de mandar todos los argumentos en un solo llamado
+function add(x) {
+  return function(y){
+    return function(z){
+      return x+y+z;
+    }
+  }
+}
+let resultado = add(10)(20)(30);
+console.log(resultado);
