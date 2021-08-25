@@ -95,7 +95,6 @@ function whatIsInAName(collection, source) {
           return false;
       }
     }
-    console.log(checks);
     if (checks.every(element => (element == true))){
       for(let i = 0; i < cantDeProp; i++){
         checks[i] = false;
@@ -104,8 +103,6 @@ function whatIsInAName(collection, source) {
     }else
       return false;
   });
-
-  console.log(newArr);
   return newArr;
 }
 whatIsInAName([{ "apple": 1, "bat": 2 }, { "bat": 2 }, { "apple": 1, "bat": 2, "cookie": 2 }], { "apple": 1, "bat": 2 });
@@ -115,8 +112,24 @@ function spinalCase(str) {
   let myRegex = /([A-Z])/g; //Mayusculas
   let newStr = str.replace(myRegex, " $1"); //Cada vez que encuentra una mayuscula le agrega un espacio adelante
   newStr = newStr.trim().toLowerCase().split(/[\W|_]+/).join('-');
-  console.log(newStr);
   return newStr;
 }
 
 spinalCase("The_Andy_Griffith_Show");
+
+//Mover el primer grupo de consonantes y agregar 'ay' O agregar 'way'
+function translatePigLatin(str) {
+  //miro el primer char y pregunto si es vocal o consonante usando regex
+  //Hay que agarrar el consonant cluster, no solo la primera consonante
+  let newStr = str;
+  let consonantCluster = str.match(/[^aeiou]+/).toString(); //Sin el toString() no funciona, str.match() devuelve un objeto
+  if(/[aeiou]/.test(str[0])){
+    newStr = newStr.concat("way");
+  }else{
+    newStr = newStr.slice(consonantCluster.length).concat(consonantCluster + "ay");
+  }
+  console.log(newStr);
+  return newStr;
+}
+
+translatePigLatin("psicologia");
