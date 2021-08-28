@@ -87,8 +87,3 @@ let weight = myBird.getWeight();
 
 //Immediately Invoked Function Expression (IIFE)
 (function(){console.log('Hello World!')})();
-
-
-
-
-
