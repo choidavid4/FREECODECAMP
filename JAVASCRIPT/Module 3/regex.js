@@ -198,4 +198,3 @@ let regex = /^\s+|\s+$/g;
 getTest(string,regex);
 console.log(string.replace(regex, ""));
 
-
