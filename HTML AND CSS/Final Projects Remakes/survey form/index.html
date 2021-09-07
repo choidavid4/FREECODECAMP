@@ -1,0 +1,217 @@
+<!-- User Story #1: I can see a title with id="title" in H1 sized text. DONE
+
+User Story #2: I can see a short explanation with id="description" in P sized text. DONE
+
+User Story #3: I can see a form with id="survey-form". DONE
+
+User Story #4: Inside the form element, I am required to enter my name in a field with id="name". DONE
+
+User Story #5: Inside the form element, I am required to enter an email in a field with id="email". DONE
+
+User Story #6: If I enter an email that is not formatted correctly, I will see an HTML5 validation error. DONE
+
+User Story #7: Inside the form, I can enter a number in a field with id="number". DONE
+
+User Story #8: If I enter non-numbers in the number input, I will see an HTML5 validation error. DONE
+
+User Story #9: If I enter numbers outside the range of the number input, which are defined by the min and max attributes, I will see an HTML5 validation error. DONE
+
+User Story #10: For the name, email, and number input fields inside the form I can see corresponding labels that describe the purpose of each field with the following ids: id="name-label", id="email-label", and id="number-label". DONE
+
+User Story #11: For the name, email, and number input fields, I can see placeholder text that gives me a description or instructions for each field. DONE
+
+User Story #12: Inside the form element, I can select an option from a dropdown that has a corresponding id="dropdown". DONE
+
+User Story #13: Inside the form element, I can select a field from one or more groups of radio buttons. Each group should be grouped using the name attribute. DONE
+
+User Story #14: Inside the form element, I can select several fields from a series of checkboxes, each of which must have a value attribute. DONE
+
+User Story #15: Inside the form element, I am presented with a textarea at the end for additional comments. DONE
+
+User Story #16: Inside the form element, I am presented with a button with id="submit" to submit all my inputs. DONE -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div class="background">
+        <h1 class="center-text" id="title">True MCU Fan Test</h1>
+        <p id="description" class="center-text description"><i>Test if you are a <b>TRUE MCU FAN</b></i></p>
+        <form action="/action-page.php" method="get" id="survey-form">
+            <div class="main-form">
+                <label for="name" class="question" id="name-label">Name</label>
+                <input type="text" name="name" id="name" placeholder="Enter your name (Required)" class="big-input" required>
+            
+                <label for="email" class="question" id="email-label">E-mail</label>
+                <input type="email" name="email" id="email" placeholder="Enter your e-mail (Required)" class="big-input" required>
+
+                <label for="number" class="question" id="number-label">Rate the Marvel Cinematic Universe from 1 to 100</label>
+                <input type="number" 
+                name="rate" 
+                id="number" 
+                placeholder="Rate the MCU (1 - 100)" 
+                class="big-input" 
+                min="1"
+                max="100">
+            
+                <label for="favourite" class="question">Who's your favourite character in the MCU (Marvel Cinematic Universe)</label>
+                <input type="text" name="favourite" id="favourite" placeholder="Eg. Dr. Strange, War Machine, Thor, Ant-man, etc"
+                    class="big-input">
+            
+
+                <div class="separator"></div>
+                <label class="question">What were Tony Stark's last words?</label>
+                <br>
+                <br>
+                <label for="sorry-pep">
+                    <input type="radio" name="last-words" id="sorry-pep" value="Sorry Pep" class="margin-right10">
+                    Sorry Pep</label>
+                <br>
+                <label for="i-love-you-3000">
+                    <input type="radio" name="last-words" id="i-love-you-3000" value="I love you 3000" class="margin-right10">
+                    I love you 3000</label>
+                <br>
+                <label for="i-am-iron-man">
+                    <input type="radio" name="last-words" id="i-am-iron-man" value="I am Iron Man" class="margin-right10">
+                    I am Iron Man</label>
+                <br>
+                <label for="its-okay-kid">
+                    <input type="radio" name="last-words" id="its-okay-kid" value="It's okay kid" class="margin-right10">
+                    It's okay kid</label>
+                
+            
+                <div class="separator"></div>
+                <label class="question">Which of these is NOT a Thanos phrase?</label>
+                <br>
+                <br>
+                <label for="small-price">
+                    <input type="radio" name="thanos-phrase" id="small-price" value="A small price to pay for salvation" class="margin-right10">
+                    A small price to pay for salvation</label>
+                <br>
+                <label for="i-know-what">
+                    <input type="radio" name="thanos-phrase" id="i-know-what" value="I know what it's like to lose" class="margin-right10">
+                I know what it's like to lose</label>
+                <br>
+                <label for="youre-not-the-only-one">
+                    <input type="radio" 
+                    name="thanos-phrase" 
+                    id="youre-not-the-only-one" 
+                    value="You're not the only one cursed with power" class="margin-right10">
+                You're not the only one cursed with power</label>
+                <br>
+                <label for="what-im-about-to-do">
+                    <input type="radio" 
+                    name="thanos-phrase" 
+                    id="what-im-about-to-do" 
+                    value="What I am about to do to your little planet" class="margin-right10">
+                What I am about to do to your little planet. I'm gonna enjoy it very very much.</label>
+                
+                <div class="separator"></div>
+
+                <label class="question">Which of these characters are dead after the events of Avengers Endgame?</label>
+                <br>
+                <label for="dr-strange">
+                    <input type="checkbox" 
+                    name="dead" 
+                    id="dr-strange"
+                    value="Dr. Strange"
+                    class="margin-right10">
+                Dr. Strange</label>
+                <br>
+                <label for="spiderman">
+                    <input type="checkbox" 
+                    name="dead" 
+                    id="spiderman"
+                    value="Spider-Man"
+                    class="margin-right10">
+                Spider-Man</label>
+                <br>
+                <label for="iron-man">
+                    <input type="checkbox" 
+                    name="dead" 
+                    id="iron-man"
+                    value="Iron Man"
+                    class="margin-right10">
+                Iron Man</label>
+                    <br>
+                <label for="black-panther">
+                    <input type="checkbox" 
+                    name="dead" 
+                    id="black-panther"
+                    value="Black Panther"
+                    class="margin-right10">
+                Black Panther</label>
+                    <br>
+                <label for="thanos">
+                    <input type="checkbox" 
+                    name="dead" 
+                    id="thanos"
+                    value="Thanos"
+                    class="margin-right10">
+                Thanos</label>
+                <br>
+                <label for="black-widow">
+                    <input type="checkbox" 
+                    name="dead" 
+                    id="black-widow"
+                    value="Black Widow"
+                    class="margin-right10">
+                Black Widow</label>
+                <br>
+                <label for="nebula">
+                    <input type="checkbox" 
+                    name="dead" 
+                    id="nebula"
+                    value="Nebula"
+                    class="margin-right10">
+                Nebula</label>
+                <br>
+                <label for="captain-america">
+                    <input type="checkbox" 
+                    name="dead" 
+                    id="captain-america"
+                    value="Captain America"
+                    class="margin-right10">
+                Captain America</label>
+
+
+                
+
+                <div class="separator"></div>
+                <label class="question top-margin">Who is your favourite character from the first Avengers Movie?</label>
+                <select name="favourite-first" id="dropdown">
+                    <option disabled selected value>Select a character...</option>
+                    <option value="Captain America">Captain America</option>
+                    <option value="Iron Man">Iron Man</option>
+                    <option value="Black Widow">Black Widow</option>
+                    <option value="Hawkeye">Hawkeye</option>
+                    <option value="The Hulk">The Hulk</option>
+                    <option value="Thor">Thor</option>
+                    <option value="Loki">Loki</option>
+                    <option value="Nick Fury">Nick Fury</option>
+                </select>
+
+                <div class="separator"></div>
+
+                <label for="textarea" ><b>What did you feel when you saw your last MCU movie?</b></label>
+                <textarea name="last-movie" id="textarea"  rows="10" class="textarea"
+                placeholder="Write down your feelings here (max 700 characters)"
+                maxlength="700"></textarea>
+
+                <div class="separator"></div>
+                
+                <button type="submit" id="submit" class="submit-button">
+                    Submit
+                </button>
+        </form>
+        </div>
+    </div>
+</body>
+</html>

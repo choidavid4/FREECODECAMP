@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+label{
+    font-size: 1.25em;
+    width: 100%;
+}
+
+input{
+    padding: 10px;
+    margin: 20px 0 20px;
+    box-sizing: border-box;
+    font-size: 1.25em;
+}
+
+.separator{
+    height: 50px;
+}
+
+.background{
+    height: 100%;
+    background-image: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/iron-man-marvel-endgame-1556615552.jpg?crop=1.00xw:0.893xh;0,0.107xh&resize=1200:*);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    padding: 10%;
+}
+
+@media (min-width:1600px) {
+    .background{
+        padding-left: 25%;
+        padding-right: 25%;
+    }
+}
+
+@media (max-width:700px) {
+    .background{
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+}
+
+.main-form{
+    background: rgba(211, 67, 23, 0.8);
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 10px 10px 35px -4px rgba(0,0,0,0.45);
+}
+
+.center-text{
+    text-align: center;
+}
+
+h1{
+    margin-bottom: 10px;
+    font-size: 3em;
+}
+
+.big-input{
+    width: 100%;
+}
+
+.margin-right10{
+    margin-right: 10px;
+}
+
+.tiny-bottom-margin{
+    margin-bottom: 10px;
+}
+
+.submit-button{
+    width: 80%;
+    margin: auto;
+    display: block;
+    font-size: 2em;
+    border-radius: 10px;
+    margin-top: 20px;
+    color: white;
+    background: rgb(105, 4, 4);
+    border-width: 0px;
+    padding: 10px 0 10px;
+    box-shadow: 10px 10px 35px -4px rgba(0,0,0,0.45);
+}
+
+.submit-button:hover{
+    background: rgb(78, 3, 3);
+}
+
+select{
+    margin-top: 15px;
+    font-size: 1.5em;
+    width: 100%;
+    padding: 10px;
+}
+
+.question{
+    font-weight: bold;
+}
+
+.top-margin{
+    margin-top: 500px;
+}
+
+.description{
+    margin-bottom: 50px;
+}
+
+.textarea{
+    margin-top: 25px;
+    width: 100%;
+    font-family: inherit;
+    font-size: 1em;
+    padding: 5px;
+}
