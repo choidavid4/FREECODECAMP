@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img{
+    display: inline-block;
+}
+
+body{
+    background-color: rgb(255, 254, 202);
+    font-family: 'Roboto',sans-serif;
+    
+}
+
+
+
+header{
+    min-height: 75px;
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    display: flex; 
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+
+
+header *{
+    color: white
+}
+
+header img{
+    height: 50px;
+}
+
+
+.my-logo{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+header p{
+    font-size: 1.5em;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    padding-left: 20px;
+}
+
+nav a{
+    text-decoration: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+nav a:hover{
+    color: yellow;
+}
+
+#inicio{
+    height: auto;
+    background-color: rgb(30, 30, 30);
+    color: white;
+
+}
+
+#nuestras-hamburguesas{
+    min-height: 100vh;
+    background-color: white;
+    padding: 10%;
+    padding-top:100px;
+}
+
+#donde-pedir{
+    background-color: rgb(30, 30, 30);
+    color: white;
+    padding: 10%;
+}
+
+#donde-pedir iframe{
+    width: 80%;
+}
+
+
+
+
+.text-center{
+    text-align: center;
+}
+
+.titulo-inicio{
+    font-size: 3em;    
+    padding-bottom: 50px;
+}
+
+.espaciador{
+    height: 50px;
+}
+
+.red-font{
+    color: coral;
+}
+
+.feature{
+    padding: 50px;
+    height: auto;
+}
+
+.hamburguer-background{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url(https://11jj3u3z9chg9d1f14sqkl13-wpengine.netdna-ssl.com/wp-content/uploads/2019/06/Hamburger.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.achicar{
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 1.1em;
+}
+
+.yellow-font{
+    color:yellow;
+}
+
+.bun-background{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url(https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=%5B1000%2C750%5D&w=2000&h=1000&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2019%2F03%2F19%2Ffw_buttery-brioche-hamburger-buns-ft-recipe201923.jpg);
+    background-size: cover;
+}
+
+.vegetables-background{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/best-vegetables-to-grow-1616445161.jpg?crop=1.00xw:0.753xh;0,0.171xh&resize=1200:*);
+    background-size: cover;
+}
+
+h3{
+    font-size: 1.75em;
+}
+
+.dejar-mail{
+    padding-top: 50px;
+}
+
+form *{
+    font-size: 1.25em;
+    margin: 20px;
+    display: block;
+}
+
+#email{
+    width: 100%;
+    padding: 5px;
+    
+}
+
+#submit{
+    width: 50%;
+    margin: auto;
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 10px 0 10px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-family: inherit;
+}
+
+#submit:hover{
+    background-color: white;
+    color: black;
+}
+
+.margin-auto{
+    display: block;
+    margin: auto;
+}
+
+@media (min-width: 1000px) {
+    .padding25{
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+    .achicar{
+        padding-left: 25%;
+        padding-right: 25%;
+    }
+    #email{
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width:710px) {
+    header{
+        display: unset;
+        
+    }
+    .my-logo{
+        padding-top: 10px;
+        justify-content: center;
+    }
+    nav{
+        padding: 20px 0px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .titulo-inicio{
+        padding-top: 50px;
+    }
+
+    #donde-pedir iframe{
+        width: 100%;
+    }
+
+    #video{
+        width: 100%;
+    }
+    
+}
+
+
+

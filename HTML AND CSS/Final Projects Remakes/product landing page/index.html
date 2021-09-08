@@ -1,0 +1,120 @@
+<!-- Historia de Usuario #1: Mi página de aterrizaje de producto debería tener un elemento header con un respectivo id="header". DONE
+
+Historia de Usuario #2: Puedo ver una imagen dentro del elemento header con un respectivo id="header-img". El logotipo de una empresa sería una buena opción de imagen aquí. DONE
+
+Historia de Usuario #3: Dentro del elemento #header puedo ver un elemento nav con un respectivo id="nav-bar". DONE
+
+Historia de Usuario #4: Puedo ver al menos tres elementos en los que se puede hacer click dentro del elemento nav, cada uno con la clase nav-link. DONE
+
+Historia de Usuario #5: Cuando hago clic en un botón .nav-link en el elemento nav, soy llevado a la sección correspondiente de la página de aterrizaje. DONE
+
+Historia de Usuario #6: Puedo ver un video de producto incrustado con id="video". DONE
+
+Historia de usuario #8: Mi página de aterrizaje tiene un elemento form con un respectivo id="form". DONE
+
+Historia de Usuario #8: Dentro del formulario, hay un campo de entrada input con id="email" donde puedo introducir una dirección de correo electrónico. DONE
+
+Historia de Usuario #9: El campo de entrada #email debe tener un texto provisional para que el usuario sepa para qué sirve el campo. DONE
+
+Historia de Usuario #10: El campo de entrada #email utiliza la validación de HTML5 para confirmar que el texto introducido es una dirección de correo electrónico. DONE
+
+Historia de Usuario #11: Dentro del formulario, hay un input de envío con un respectivo id="submit". DONE
+
+Historia de Usuario #12: Cuando hago clic en el elemento #submit, el correo electrónico se envía a una página estática (utiliza esta URL de pruebas: https://www.freecodecamp.com/email-submit). DONE
+
+Historia de Usuario #13: La barra de navegación debe estar siempre en la parte superior del viewport. DONE
+
+Historia de Usuario #14: Mi página de aterrizaje de producto debería tener al menos una media query. DONE
+
+Historia de Usuario #15: Mi página de aterrizaje de producto debería utilizar CSS flexbox al menos una vez. DONE -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburguesas Big Bang</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header id="header">
+
+        <a href="#" class="my-logo">
+            <img src="logo.png" alt="hamburguer logo" id="header-img">
+            <p>Hamburguesas Big Bang</p>
+        </a>
+
+            
+        <nav id="nav-bar">
+            <a href="#inicio" class="nav-link">Inicio</a>
+            <a href="#nuestras-hamburguesas" class="nav-link">Nuestras Hamburguesas</a>
+            <a href="#donde-pedir" class="nav-link">Donde pedir</a>
+        </nav>
+    </header>
+    <main>
+        <section id="inicio">
+            
+            <div class="feature hamburguer-background padding25">
+                <div class="espaciador"></div>
+                <h1 class="text-center titulo-inicio">Las mejores hamburguesas DEL MUNDO!</h1>
+                <h3 class="text-center yellow-font">JUGOSOS PATIS JUGOSOS</h3>
+                <br>
+                <p class="text-center achicar"><em>Los patis mas jugosos del mundo los vas a encontrar en hamburguesas big bang</em></p>
+            </div>
+
+            <div class="feature bun-background padding25">
+                <h3 class="text-center yellow-font">DELICIOSOS PANES CALENTITOS</h3>
+                <br>
+                <p class="text-center achicar"><em>"We have the best buns in the state" que significa que nuestros panes son los mas deliciosos, suaves, esponjosos del universo entero!</em></p>
+            </div>
+
+            <div class="feature vegetables-background padding25">
+                <h3 class="text-center yellow-font">LOS VEGETALES MÁS FRESCOS</h3>
+                <br>
+                <p class="text-center achicar"><em>Tenemos literal nuestro cultivo propio de vegetales frescos recien salidos de la tierra, y sin perder nada de tiempo lo ponemos en nuestras hamburguesas para que sientas el sabor de la madre naturaleza</em></p>
+                <div class="espaciador"></div>
+            </div>
+            
+            
+            
+        </section>
+        <section id="nuestras-hamburguesas">
+
+            <h2 class="text-center titulo-inicio">Presentación de nuestras hamburguesas</h2>
+            <div class="espaciador"></div>
+            <iframe 
+            width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/dA0VGEbbw4g" title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen 
+            id="video" 
+            class="margin-auto"></iframe>
+        </section>
+        <section id="donde-pedir">
+            <h2 class="text-center titulo-inicio">¿Por donde pedir nuestros productos?</h2>
+
+            <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2558922.3079542336!2d-98.10808453762698!3d33.27448020170691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864e99300bdf9415%3A0x6ecc6327fda5dcf5!2sShake%20Shack!5e0!3m2!1ses-419!2sar!4v1631067581043!5m2!1ses-419!2sar" 
+            width="600" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            class="margin-auto"></iframe>
+
+            
+            <h2 class="text-center dejar-mail">Dejanos tu e-mail asi te spameamos con memes de hamburguesas</h2>
+            <form action="https://www.freecodecamp.com/email-submit" method="GET" id="form">
+                
+                <input type="email" name="email" id="email" placeholder="Ingresa tu e-mail aqui">
+                <input type="submit" value="Enviar" id="submit">
+            </form>
+
+        </section>
+    </main>
+    
+</body>
+</html>
