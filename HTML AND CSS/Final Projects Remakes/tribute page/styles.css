@@ -1,0 +1,70 @@
+body{
+    background: linear-gradient(
+        180deg,
+        rgb(144, 27, 27),
+        rgb(71, 11, 11)
+        
+    );
+    color: white;
+    font-family: 'Segoe UI';
+}
+
+main{
+    padding: 25px;
+}
+
+h1, h2, p{
+    text-align: center;
+}
+
+#title-block h2{
+    margin-top: -20px;
+    font-size: 1em;
+    font-weight: normal;
+}
+
+#img-div{
+    padding: 50px 0px;
+}
+
+#img-div p{
+    margin-top: 0px;
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+img{
+    display: block;
+    margin: auto;
+    max-width: 100%;
+}
+
+section{
+    padding-top: 50px;
+}
+
+section ul{
+    margin: 50px 10vw; 
+}
+
+@media (min-width: 990px) {
+    section ul{
+        margin: 50px 25%;
+    }
+}
+
+section li{
+    padding-bottom: 2vw;
+}
+
+a{
+    color: white;
+}
+
+a:hover{
+    
+    color: rgb(255, 41, 41);
+}
+
+
+

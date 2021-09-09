@@ -1,0 +1,63 @@
+<!-- User Story #1: My tribute page should have an element with a corresponding id="main", which contains all other elements. DONE
+
+User Story #2: I should see an element with a corresponding id="title", which contains a string (i.e. text) that describes the subject of the tribute page (e.g. "Dr. Norman Borlaug"). DONE
+
+User Story #3: I should see a div element with a corresponding id="img-div". DONE
+
+User Story #4: Within the img-div element, I should see an img element with a corresponding id="image". DONE
+
+User Story #5: Within the img-div element, I should see an element with a corresponding id="img-caption" that contains textual content describing the image shown in img-div. DONE
+
+User Story #6: I should see an element with a corresponding id="tribute-info", which contains textual content describing the subject of the tribute page. DONE
+
+User Story #7: I should see an a element with a corresponding id="tribute-link", which links to an outside site that contains additional information about the subject of the tribute page. HINT: You must give your element an attribute of target and set it to _blank in order for your link to open in a new tab (i.e. target="_blank"). DONE
+
+User Story #8: The img element should responsively resize, relative to the width of its parent element, without exceeding its original size. DONE
+
+User Story #9: The img element should be centered within its parent element. DONE -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>an Iron Man Tribute</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main id="main">
+        <div id="title-block">
+            <h1 id="title">Dr. Tony Stark AKA Iron Man</h1>
+            <h2>In memory of the man who saved the universe</h2>
+        </div>
+            
+
+        <div id="img-div">
+            <img src="http://cdn.mos.cms.futurecdn.net/aTK8YBkBAbqCSzNGxt8adL.jpg" alt="iron man" id="image">
+            <p id="img-caption">
+                Dr. Stark and his automated suits executing "clean slate protocol".
+            </p>
+        </div>
+        <hr>
+        <section id="tribute-info">
+            <h2>These are some of Dr. Stark's achievements</h2>
+            <ul>
+                <li>Billionaire industrialist</li>
+                <li>Founding member of the Avengers</li>
+                <li>CEO of Stark Industries</li>
+                <li>Helped to stop the Chitauri Invasion</li>
+                <li>Battled one to one with Thanos in 2018</li>
+                <li>Proud father or Morgan Stark and engaded to Pepper Potts</li>
+                <li>Traveled through time</li>
+                <li>Invented a gauntlet that could harness the power of the infinity stones</li>
+                <li>Fought against the army of Thanos from the past</li>
+                <li>Saved the universe</li>
+            </ul>
+            <hr>
+            <p>If you want to know more about Tony, check this <a id="tribute-link" target="_blank" href="https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man">wikipedia entry</a>.</p>
+        </section>
+
+    </main>
+</body>
+</html>
