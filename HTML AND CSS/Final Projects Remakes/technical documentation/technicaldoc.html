@@ -1,32 +1,32 @@
-<!-- User Story #1: I can see a main element with a corresponding id="main-doc", which contains the page's main content (technical documentation).
+<!-- User Story #1: I can see a main element with a corresponding id="main-doc", which contains the page's main content (technical documentation). DONE
 
-User Story #2: Within the #main-doc element, I can see several section elements, each with a class of main-section. There should be a minimum of 5.
+User Story #2: Within the #main-doc element, I can see several section elements, each with a class of main-section. There should be a minimum of 5. DONE
 
-User Story #3: The first element within each .main-section should be a header element which contains text that describes the topic of that section.
+User Story #3: The first element within each .main-section should be a header element which contains text that describes the topic of that section. DONE
 
-User Story #4: Each section element with the class of main-section should also have an id that corresponds with the text of each header contained within it. Any spaces should be replaced with underscores (e.g. The section that contains the header "JavaScript and Java" should have a corresponding id="JavaScript_and_Java").
+User Story #4: Each section element with the class of main-section should also have an id that corresponds with the text of each header contained within it. Any spaces should be replaced with underscores (e.g. The section that contains the header "JavaScript and Java" should have a corresponding id="JavaScript_and_Java"). DONE
 
-User Story #5: The .main-section elements should contain at least 10 p elements total (not each).
+User Story #5: The .main-section elements should contain at least 10 p elements total (not each). DONE
 
-User Story #6: The .main-section elements should contain at least 5 code elements total (not each).
+User Story #6: The .main-section elements should contain at least 5 code elements total (not each). DONE
 
-User Story #7: The .main-section elements should contain at least 5 li items total (not each).
+User Story #7: The .main-section elements should contain at least 5 li items total (not each). DONE
 
-User Story #8: I can see a nav element with a corresponding id="navbar".
+User Story #8: I can see a nav element with a corresponding id="navbar". DONE
 
-User Story #9: The navbar element should contain one header element which contains text that describes the topic of the technical documentation.
+User Story #9: The navbar element should contain one header element which contains text that describes the topic of the technical documentation. DONE
 
-User Story #10: Additionally, the navbar should contain link (a) elements with the class of nav-link. There should be one for every element with the class main-section.
+User Story #10: Additionally, the navbar should contain link (a) elements with the class of nav-link. There should be one for every element with the class main-section. DONE
 
-User Story #11: The header element in the navbar must come before any link (a) elements in the navbar.
+User Story #11: The header element in the navbar must come before any link (a) elements in the navbar. DONE
 
-User Story #12: Each element with the class of nav-link should contain text that corresponds to the header text within each section (e.g. if you have a "Hello world" section/header, your navbar should have an element which contains the text "Hello world").
+User Story #12: Each element with the class of nav-link should contain text that corresponds to the header text within each section (e.g. if you have a "Hello world" section/header, your navbar should have an element which contains the text "Hello world"). DONE
 
-User Story #13: When I click on a navbar element, the page should navigate to the corresponding section of the main-doc element (e.g. If I click on a nav-link element that contains the text "Hello world", the page navigates to a section element that has that id and contains the corresponding header.
+User Story #13: When I click on a navbar element, the page should navigate to the corresponding section of the main-doc element (e.g. If I click on a nav-link element that contains the text "Hello world", the page navigates to a section element that has that id and contains the corresponding header. DONE
 
-User Story #14: On regular sized devices (laptops, desktops), the element with id="navbar" should be shown on the left side of the screen and should always be visible to the user.
+User Story #14: On regular sized devices (laptops, desktops), the element with id="navbar" should be shown on the left side of the screen and should always be visible to the user. DONE
 
-User Story #15: My Technical Documentation page should use at least one media query. -->
+User Story #15: My Technical Documentation page should use at least one media query. DONE -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -34,10 +34,176 @@ User Story #15: My Technical Documentation page should use at least one media qu
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Technical</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <nav id="navbar">
+        <header>Kaboom JS</header>
+        <a href="#Intro" class="nav-link">Intro</a>
+        <a href="#Quick_Start" class="nav-link">Quick Start</a>
+        <a href="#loadRoot()" class="nav-link">loadRoot()</a>
+        <a href="#loadSprite()" class="nav-link">loadSprite()</a>
+        <a href="#loadSpriteAtlas()" class="nav-link">loadSpriteAtlas()</a>
+        <a href="#loadSound()" class="nav-link">loadSound()</a>
+    </nav>
+    <main id="main-doc">
+
+        <!-- 10 p elements
+        5 code elements
+        5 li elements -->
+        <section class="main-section" id="Intro">
+            <header>Intro</header>
+            <p>Kaboom.js is a JavaScript game programming library that helps you make games fast and fun! </p>
+            <p>We are going to show a reduced version of the documentation here.</p>
+            <p>Here are some of the basic methos of kaboomJS</p>
+            <ul>
+                <li>loadRoot()</li>
+                <li>loadSprite()</li>
+                <li>loadSpriteAtlas()</li>
+                <li>loadSound()</li>
+                <li>And many more!</li>
+            </ul>
+        </section>
+
+        <section class="main-section"  id="Quick_Start">
+            <header>Quick Start</header>
+            <p>Paste this code in an html file and you're good to go</p>
+            <pre><code>
+&lt;script type="module"&gt;
+
+    // import kaboom lib
+    import kaboom from "https://unpkg.com/kaboom@next/dist/kaboom.mjs";
     
+    // initialize kaboom context
+    kaboom();
+    
+    // load the default sprite "bean"
+    loadBean();
+    
+    // add a game obj to screen, with multiple components
+    const froggy = add([
+        sprite("bean", 32),
+        pos(120, 80),
+        area(),
+        body(),
+    ]);
+    
+    // jump when user presses "space"
+    keyPress("space", () => {
+        froggy.jump();
+    });
+    
+&lt;/script&gt;
+            </code></pre>
+            <p>It's recommended to code directly in browser with the Kaboom template on Replit.com</p>
+            <h2>kaboom(conf?: KaboomConf) => KaboomCtx</h2>
+            <p>Initialize kaboom context. The starting point of all kaboom games.</p>
+            <pre><code>
+// this will create a blank canvas and import all kaboom functions to global
+kaboom();
+
+// init with some configs (check out #KaboomConf for full config list)
+// create a game with custom dimension, but stretch to fit container, keeping aspect ratio, with a clear color
+kaboom({
+    width: 320,
+    height: 240,
+    stretch: true,
+    letterbox: true,
+    font: "sinko",
+    clearColor: [ 0, 0, 255, ],
+});
+
+// all kaboom functions are imported to global automatically
+add();
+action();
+keyPress();
+vec2();
+
+// can also prevent kaboom from importing all functions to global and use a context handle
+const k = kaboom({ global: false });
+
+k.add(...);
+k.action(...);
+k.keyPress(...);
+k.vec2(...);
+            </code></pre>
+        </section>
+
+        <section class="main-section" id="loadRoot()">
+            <header>loadRoot()</header>
+            <h2>loadRoot(path?: string) => string</h2>
+            <p>Sets the root for all subsequent resource urls.</p>
+            <pre><code>
+loadRoot("https://myassets.com/");
+loadSprite("froggy", "sprites/froggy.png"); // will resolve to "https://myassets.com/sprites/frogg.png"
+            </code></pre>
+        </section>
+
+        <section class="main-section" id="loadSprite()">
+            <header>loadSprite()</header>
+            <h2>loadSprite(id: string | null, src: SpriteLoadSrc, conf?: SpriteLoadConf) => Promise&lt;SpriteData&gt;</h2>
+            <p>Load a sprite into asset manager, with name and resource url and optional config.</p>
+            <pre><code>
+// due to browser policies you'll need a static file server to load local files
+loadSprite("froggy", "froggy.png");
+loadSprite("apple", "https://kaboomjs.com/sprites/apple.png");
+
+// slice a spritesheet and add anims manually
+loadSprite("froggy", "froggy.png", {
+    sliceX: 4,
+    sliceY: 1,
+    anims: {
+        run: {
+            from: 0,
+            to: 3,
+        },
+        jump: {
+            from: 3,
+            to: 3,
+        },
+    },
+});
+            </code></pre>
+        </section>
+
+        <section class="main-section" id="loadSpriteAtlas()">
+            <header>loadSpriteAtlas()</header>
+            <h2>loadSpriteAtlas(src: SpriteLoadSrc, entries?: Record&lt;string, SpriteAtlasEntry&gt;) => Promise&lt;Record&lt;string, SpriteData&gt;&gt;</h2>
+            <p>Load sprites from a sprite atlas.</p>
+            <pre><code>
+loadSpriteAtlas("sprites/dungeon.png", {
+    "hero": {
+        x: 128,
+        y: 68,
+        width: 144,
+        height: 28,
+        sliceX: 9,
+        anims: {
+            idle: { from: 0, to: 3 },
+            run: { from: 4, to: 7 },
+            hit: { from: 8, to: 8 },
+        },
+    },
+});
+
+const player = add([
+    sprite("hero"),
+]);
+
+player.play("run");
+            </code></pre>
+        </section>
+
+        <section class="main-section" id="loadSound()">
+            <header>loadSound()</header>
+            <h2>loadSound(id: string, src: string) => Promise&lt;SoundData&gt;</h2>
+            <p>Load a sound into asset manager, with name and resource url.</p>
+            <pre><code>
+loadSound("shoot", "horse.ogg");
+loadSound("shoot", "https://kaboomjs.com/sounds/scream6.mp3");
+            </code></pre>
+        </section>
+    </main>
 </body>
 </html>

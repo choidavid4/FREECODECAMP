@@ -1,0 +1,81 @@
+
+
+body{
+    font-family: 'Source Sans Pro', 'Roboto', sans-serif;
+    margin: 0;
+}
+
+nav{
+    width: 200px;
+    background-color: rgb(230, 230, 230);
+    height: 100vh;
+    position: fixed;
+}
+
+nav header,a{
+    padding: 1em 10px;
+    
+}
+
+nav a{
+    display: block;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(156, 156, 156);
+    text-decoration: none;
+    color: black;
+}
+
+nav a:hover{
+    color: rgb(209, 82, 50);
+    background-color: white;
+}
+
+nav header{
+    font-size: 2em;
+    text-align: center;
+    cursor: default;
+}
+
+main{
+    margin-left: 200px;
+    padding: 50px 5vw;
+    font-size: 1.5em;
+}
+
+main header{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+main h2{
+    font-size: 1em;
+}
+
+main pre{
+    overflow-x: auto;
+    padding: 0 20px;
+    font-size: 0.8em;
+    background-color: rgb(230, 230, 230);
+}
+
+@media (max-width:600px) {
+    main{
+        margin-left: 0;
+    }
+    nav{
+        position: inherit;
+        height: auto;
+        width: 100%;
+    }
+
+    nav header{
+        padding: 10px 0;
+    }
+
+    nav a{
+        padding: 10px 10px;
+        text-align: default;
+    }
+
+}
