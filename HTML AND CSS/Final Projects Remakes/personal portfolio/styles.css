@@ -1,1 +1,156 @@
-/* tested */
+html{
+    scroll-behavior: smooth;
+    cursor: default;
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(9, 2, 49);
+    font-family: 'Roboto';
+    color: white;
+}
+
+nav{
+    position: fixed;
+    width: 100vw;
+    padding: 0px 5%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: rgb(4, 3, 107); 
+    
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    padding: 16px 2vw;
+    font-weight: bold;
+}
+
+nav a:hover{
+    background-color: orange;
+}
+
+section{
+    padding-top: 50px;
+}
+
+#welcome-section{
+    background-image: linear-gradient(
+        180deg,
+        rgb(4, 3, 107),
+        rgb(9, 2, 49)
+    );
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#welcome-section div{
+    text-align: center;
+}
+
+h1{
+    font-size: 4em;
+    letter-spacing: 10px;
+}
+
+h2{
+    text-align: center;
+    font-size: 2em;
+    padding: 50px 0px;
+    
+}
+
+#welcome-section p{
+    font-size: 1.5em;
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+
+img{
+    height: 27vw;
+    width: 27vw;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    
+}
+
+.project-container{
+    display: flex;
+    justify-content: center;
+}
+
+#projects{
+    padding: 200px 20px;
+    
+}
+
+#projects h2{
+    margin-bottom: 50px;
+}
+
+#projects p{
+    text-align: center;
+    padding: 20px 0;
+    
+}
+
+#projects a{
+    padding: 0 20px;
+}
+
+#projects a:hover p{
+    transition: 1s;
+    transform: scale(1.1);
+    /* background: rgb(243, 183, 55); */
+}
+
+@media (max-width:1000px) {
+    .project-container{
+        display: block;
+    }
+
+    img{
+        display: block;
+        width: 100%;
+        height: 80vw;
+    }
+
+    #projects a:hover p{
+        transition: 1s;
+        transform: scale(1.5);
+    }
+}
+
+#contact{
+    padding: 150px 20px;
+    text-align: center;
+    height: 75vh;
+}
+
+#contact h2{
+    padding-top: 10px;
+    padding-bottom: 100px;
+}
+
+#contact a{
+    padding: 15px 5vw;
+}
+
+#contact a:hover{
+    transition: 1s;
+    background-color: rgb(4, 101, 114);
+}

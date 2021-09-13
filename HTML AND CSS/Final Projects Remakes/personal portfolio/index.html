@@ -1,35 +1,77 @@
-<!-- User Story #1: My portfolio should have a welcome section with an id of welcome-section.
+<!-- User Story #1: My portfolio should have a welcome section with an id of welcome-section. DONE
 
-User Story #2: The welcome section should have an h1 element that contains text.
+User Story #2: The welcome section should have an h1 element that contains text. DONE
 
-User Story #3: My portfolio should have a projects section with an id of projects.
+User Story #3: My portfolio should have a projects section with an id of projects. DONE
 
-User Story #4: The projects section should contain at least one element with a class of project-tile to hold a project.
+User Story #4: The projects section should contain at least one element with a class of project-tile to hold a project. DONE
 
-User Story #5: The projects section should contain at least one link to a project.
+User Story #5: The projects section should contain at least one link to a project. DONE
 
-User Story #6: My portfolio should have a navbar with an id of navbar.
+User Story #6: My portfolio should have a navbar with an id of navbar. DONE
 
-User Story #7: The navbar should contain at least one link that I can click on to navigate to different sections of the page.
+User Story #7: The navbar should contain at least one link that I can click on to navigate to different sections of the page. DONE
 
-User Story #8: My portfolio should have a link with an id of profile-link, which opens my GitHub or FCC profile in a new tab.
+User Story #8: My portfolio should have a link with an id of profile-link, which opens my GitHub or FCC profile in a new tab. DONE
 
-User Story #9: My portfolio should have at least one media query.
+User Story #9: My portfolio should have at least one media query. DONE
 
-User Story #10: The height of the welcome section should be equal to the height of the viewport.
+User Story #10: The height of the welcome section should be equal to the height of the viewport. DONE
 
-User Story #11: The navbar should always be at the top of the viewport. -->
+User Story #11: The navbar should always be at the top of the viewport. DONE -->
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Personal portfolio</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        
-    </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav id="navbar">
+        <a href="#welcome-section">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section id="welcome-section">
+        <div>
+            <h1>David Choi</h1>
+            <p>front-end developer</p>
+        </div>
+    </section>
+    <section id="projects">
+        <h2>These are some of my projects</h2>
+        <div class="project-container">
+            <div class="project-tile">
+                <a href="https://codepen.io/deivchoi/full/YzQZvyW" target="_blank">
+                <img src="https://i.imgur.com/x0g5FtU.jpg" alt="tribute page">
+                <p>Tribute to Tony Stark</p>
+                </a>
+            </div>
+            <div class="project-tile">
+                <a href="https://codepen.io/deivchoi/full/JjJERNQ" target="_blank">
+                <img src="https://i.imgur.com/ueqmIvp.jpg" alt="product landing page" >
+                <p>Hamburguesas Big bang</p></a>
+            </div>
+            <div class="project-tile">
+                <a href="https://codepen.io/deivchoi/full/xxrrZNm" target="_blank">
+                <img src="https://i.imgur.com/uB8FYe6.jpg" alt="technical documentation">
+                <p>Kaboom JS docs</p></a>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <p>In case you want to know more about me...</p>
+        <h2>These are my socials</h2>
+        <a href="https://twitter.com/deivchoi" target="_blank" >Twitter</a>
+        <a href="https://github.com/choidavid4" target="_blank" id="profile-link">GitHub</a>
+        <a href="https://tiktok.com/@deivchoi" target="_blank" >TikTok</a>
+        <a href="https://youtube.com/c/deivchoi" target="_blank" >YouTube</a>
+    </section>
+</body>
+
 </html>
